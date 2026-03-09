@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="panel">
+        <div class="panel__header">
+          <div>
+            <p class="eyebrow">Classic Loop</p>
+            <h1>Snake</h1>
+          </div>
+          <div class="score-card" aria-live="polite">
+            <span class="score-card__label">Score</span>
+            <strong id="score">0</strong>
+          </div>
+        </div>
+
+        <p class="status" id="status">
+          Press an arrow key, use WASD, or tap Play to start.
+        </p>
+
+        <div class="board-frame">
+          <div
+            id="board"
+            class="board"
+            role="grid"
+            aria-label="Snake game board"
+          ></div>
+        </div>
+
+        <div class="toolbar">
+          <button id="pauseButton" class="button button--secondary" type="button">
+            Play
+          </button>
+          <button id="restartButton" class="button" type="button">Restart</button>
+        </div>
+
+        <section class="controls" aria-label="Touch controls">
+          <button class="control control--up" data-direction="up" type="button">
+            Up
+          </button>
+          <button class="control control--left" data-direction="left" type="button">
+            Left
+          </button>
+          <button class="control control--down" data-direction="down" type="button">
+            Down
+          </button>
+          <button class="control control--right" data-direction="right" type="button">
+            Right
+          </button>
+        </section>
+
+        <p class="hint">
+          Keyboard: arrows or WASD. Space toggles pause. Enter restarts after a
+          crash.
+        </p>
+      </section>
+    </main>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
